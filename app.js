@@ -1,14 +1,17 @@
-const http = require('http');
+'use strict';
 
-// Create an instance of the http server to handle HTTP requests
-let app = http.createServer((req, res) => {
-    // Set a response type of plain text for the response
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+const express = require('express');
 
-    // Send back a response and end the connection
-    res.end('Hello World!\n');
+// Constants
+const PORT = 8080;
+const HOST = '0.0.0.0';
+
+// App
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Hello World');
 });
 
-// Start the server on port 3000
-app.listen(8080, '127.0.0.1');
-console.log('Node server running on port 3000');
+app.listen(PORT, HOST, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
+});
