@@ -9,8 +9,7 @@ spec:
       targetPort: http
   type: NodePort
   selector:
-    app:
-      run: my-nginx
+    app: node
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,12 +17,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      run: my-nginx
+      app: node
   replicas: 2
   template:
     metadata:
       labels:
-        run: my-nginx
+        app: node
     spec:
       containers:
       - name: my-nginx
