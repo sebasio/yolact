@@ -7,6 +7,7 @@ spec:
     - name: http
       port: 80
       targetPort: http
+  type: NodePort
   selector:
     app:
       run: my-nginx
