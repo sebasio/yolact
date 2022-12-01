@@ -25,7 +25,7 @@ spec:
         app: node
     spec:
       containers:
-      - name: my-nginx
+      - name: node
         image: nginx
         ports:
         - containerPort: 80
