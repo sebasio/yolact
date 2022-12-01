@@ -10,6 +10,7 @@ spec:
   type: NodePort
   selector:
     app: node
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
