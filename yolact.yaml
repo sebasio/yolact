@@ -27,6 +27,6 @@ spec:
     spec:
       containers:
       - name: node
-        image: nginx
+        image: sebas-namespace/sebas-imagen
         ports:
         - containerPort: 80
